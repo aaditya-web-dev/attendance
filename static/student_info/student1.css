@@ -1,0 +1,119 @@
+/* General body styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean and modern font */
+    background-color: #f0f2f5; /* Light gray background for contrast */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.5s ease;
+}
+
+/* Add smooth scroll effect */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Adding a subtle gradient background for the page */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #e2ebf0, #f8f9fa); /* Soft gradient effect */
+    z-index: -1;
+}
+
+
+.container {
+    max-width: 1300px; /* Increased container width */
+    margin: 50px auto;
+    padding: 40px; /* Increased padding */
+    background-color: #f5f7fa;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);*/
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Student card styling with improved padding and larger photo */
+.student_card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* Increased spacing between cards */
+    padding: 30px; /* Increased padding inside the card */
+    background: linear-gradient(135deg, #e2ebf0, #f8f9fa);;
+    border-radius: 15px; /* Slightly larger rounding for modern look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fade-in 0.8s ease forwards; /* Faster fade-in animation */
+}
+
+/* Improved hover effect for student cards */
+.student_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.student_photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+/* Student photo styling - larger size */
+.student_photo img {
+    width: 100%; /* Larger image size */
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 30px; /* More space between photo and details */
+    object-fit: cover;
+    border: 4px solid #007bff; /* Border around photo */
+}
+
+/* Student details styling */
+.student_detail {
+    flex-grow: 1;
+    font-size: 18px; /* Larger font size */
+}
+
+/* Improved styling for individual text fields */
+.student_name,
+.student_rollno,
+.student_dob {
+    margin-bottom: 12px; /* Spacing between details */
+    font-size: 18px;
+    color: #333;
+}
+
+/* Styling the labels to make them more prominent */
+.student_name span,
+.student_rollno span,
+.student_dob span {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 18px;
+}
+
+/* Adding background color and rounded corners to the labels */
+.student_name span,
+.student_rollno span,
+.student_dob span {
+    background-color: #e9f1ff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
