@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            text-align: center;
+        }
+
+        .logo-container img {
+            width: 100%;
+            animation: fadeIn 2s ease-in-out;
+        }
+        /* Container Styling */
+        .button-container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Logo Styling */
+        .button-container img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff7eb3, #ff758c);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            margin: 15px;
+            border-radius: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #ff758c, #ff7eb3);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Keyframes for Fade In Effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="https://www.bciit.ac.in/images/logo/logo.png" alt="BCA Logo">
+    </div>
+    <div class="button-container">
+        <a href="{% url 'student' %}" class="button">BCA 1st Year</a>
+        <a href="{% url 'student2' %}" class="button">BCA 2nd Year</a>
+        <a href="{% url 'student3' %}" class="button">BCA 3rd Year</a>
+    </div>
+</body>
+</html>

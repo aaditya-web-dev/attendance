@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Student Information</title>
+        {% load static %}
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+            integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'student_info/student1.css' %}">
+        <style>
+            /* Additional styling can be added here if needed */
+        </style>
+    </head>
+
+    <body>
+        <img src="https://www.bciit.ac.in/images/logo/logo.png" width="100%">
+        <div style="display: flex; margin-top: 20px;margin-right: 650px;margin-left: 650px; box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);"><h1 style="background:#f0f3fa;padding-left: 60px;">STUDENT INFO </h1></div>
+        <div class="container">
+            {% if student%}
+            {% for i in student %}
+            <div class="student_card">
+                <div class="student_photo">
+                    <img src="{{ i.photo.url }}" alt="student">
+                </div>
+                <div class="student_detail">
+                    <div class="student_name">
+                        <span>Name : </span> {{ i.name }}
+                    </div>
+                    <div class="student_name">
+                        <span>year : </span> {{ i.year }}
+                    </div>
+                    <div class="student_rollno">
+                        <span>Roll No : </span> {{ i.rollno }}
+                    </div>
+                    <div class="student_dob">
+                        <span>Date of Birth : </span> {{ i.dob }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <h1 style="text-align: center;">No record found</h1>
+            {% endif %}
+        </div>
+    </body>
+
+</html>
